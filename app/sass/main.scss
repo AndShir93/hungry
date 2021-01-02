@@ -99,3 +99,25 @@ img{
         }
     }
 }
+@media (max-width: 449px){
+    .menu{
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        background-color: rgba(255, 214, 0, .7);
+        margin: 0;
+        position: absolute;
+        left: 00%;
+        transition: 1s;
+        font-size: .75rem;
+        &__item{
+            padding: .2rem 0;
+        }
+        &__link{
+            color: #fff;
+        }
+        .logo{
+            display: none;
+        }
+    }
+}
