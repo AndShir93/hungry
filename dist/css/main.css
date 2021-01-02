@@ -1,0 +1,109 @@
+@font-face {
+  font-family: BannyBold;
+  src: url(../fonts/Banny-BoldRound.woff);
+}
+
+@font-face {
+  font-family: BannyLight;
+  src: url(../fonts/Banny-LightRound.woff);
+}
+
+@font-face {
+  font-family: BannyRound;
+  src: url(../fonts/Banny-Round.woff);
+}
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url(../fonts/OpenSans-Light.woff);
+}
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url(../fonts/OpenSans-Regular.woff);
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../fonts/OpenSans-SemiBold.woff);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.menu {
+  height: 75px;
+  font-family: OpenSansBold;
+  font-size: .75rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_top {
+  margin: 25px 0 0 0;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link:before {
+  content: '';
+  transition: .5s;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ffd600;
+  bottom: -10px;
+}
+
+.menu__link:after {
+  content: '';
+  transition: .5s;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ffd600;
+  bottom: -25px;
+}
+
+.menu__item:hover .menu__link:after, .menu__item:hover .menu__link:before {
+  opacity: 1;
+  bottom: -2px;
+}
+
+.menu .logo {
+  align-self: end;
+}
+
+@media (max-width: 662px) {
+  .menu {
+    height: 45px;
+    font-size: .65rem;
+  }
+  .menu_top {
+    margin: 15px 0 0 0;
+  }
+  .menu .logo {
+    width: 60px;
+  }
+}
