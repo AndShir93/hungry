@@ -32,6 +32,9 @@ $OpenSansBold: OpenSansBold;
 *{
     box-sizing: border-box;
 }
+body{
+    min-width: 310px;
+}
 img{
     width:100%;
 }
@@ -166,7 +169,7 @@ img{
         margin: 0 0 1.7rem 0;
     }
     &__title{
-        margin: 0 0 4rem 0;
+        margin: 0 4rem 4rem 4rem;
         &::after{
             top: 1rem
         }
@@ -189,7 +192,7 @@ img{
         transform: rotate(-90deg);
         transform-origin: left top 0;
         left: 0;
-        top: 62%;
+        top: calc(50% + 120px);
         margin: 0 0 0 .5rem;
     }
     &__social{
@@ -220,6 +223,9 @@ img{
     }
 }
 @media (max-width: 700px){
+    .title{
+        font-size: 4rem;
+    }
     .menu{
         height: 45px;
         font-size: .65rem;
@@ -234,8 +240,25 @@ img{
             flex-basis: 60px;
         }
     }
+    .main-section{
+        min-height: 500px;
+        &__button{
+            width: 150px;
+            padding: 1rem 2rem;
+        }
+        &__social-item{
+            width: 50px;
+            height: 50px;
+        }
+    }
 }
 @media (max-width: 449px){
+    .title{
+        font-size: 3rem;
+    }
+    .button{
+        font-size: .6rem;
+    }
     .menu{
         width: 100%;
         flex-direction: column;
@@ -243,7 +266,7 @@ img{
         background-color: rgba(255, 214, 0, .7);
         margin: 0;
         position: absolute;
-        left: 00%;
+        left: -100%;
         transition: 1s;
         font-size: .75rem;
         &__item{
@@ -254,6 +277,29 @@ img{
         }
         .logo{
             display: none;
+        }
+    }
+    .main-section{
+        min-height: 250px;
+        &__subtitle{
+            font-size: .6rem;
+        }
+        &__title{
+            margin: 0 0 2rem 0;
+        }
+        &__schedule{
+            font-size: .6rem;
+        }
+        &__social-item{
+            width: 40px;
+            height: 40px;
+        }
+        &__button{
+            width: 100px;
+            padding: 1rem 0;
+        }
+        & .button + .button{
+            margin: 0 0 0 1rem;
         }
     }
 }

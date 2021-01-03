@@ -32,6 +32,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-width: 310px;
+}
+
 img {
   width: 100%;
 }
@@ -187,7 +191,7 @@ img {
 }
 
 .main-section__title {
-  margin: 0 0 4rem 0;
+  margin: 0 4rem 4rem 4rem;
 }
 
 .main-section__title::after {
@@ -215,7 +219,7 @@ img {
   transform: rotate(-90deg);
   transform-origin: left top 0;
   left: 0;
-  top: 62%;
+  top: calc(50% + 120px);
   margin: 0 0 0 .5rem;
 }
 
@@ -258,6 +262,9 @@ img {
 }
 
 @media (max-width: 700px) {
+  .title {
+    font-size: 4rem;
+  }
   .menu {
     height: 45px;
     font-size: .65rem;
@@ -272,9 +279,26 @@ img {
     flex-grow: 1;
     flex-basis: 60px;
   }
+  .main-section {
+    min-height: 500px;
+  }
+  .main-section__button {
+    width: 150px;
+    padding: 1rem 2rem;
+  }
+  .main-section__social-item {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 449px) {
+  .title {
+    font-size: 3rem;
+  }
+  .button {
+    font-size: .6rem;
+  }
   .menu {
     width: 100%;
     flex-direction: column;
@@ -282,7 +306,7 @@ img {
     background-color: rgba(255, 214, 0, 0.7);
     margin: 0;
     position: absolute;
-    left: 00%;
+    left: -100%;
     transition: 1s;
     font-size: .75rem;
   }
@@ -294,5 +318,28 @@ img {
   }
   .menu .logo {
     display: none;
+  }
+  .main-section {
+    min-height: 250px;
+  }
+  .main-section__subtitle {
+    font-size: .6rem;
+  }
+  .main-section__title {
+    margin: 0 0 2rem 0;
+  }
+  .main-section__schedule {
+    font-size: .6rem;
+  }
+  .main-section__social-item {
+    width: 40px;
+    height: 40px;
+  }
+  .main-section__button {
+    width: 100px;
+    padding: 1rem 0;
+  }
+  .main-section .button + .button {
+    margin: 0 0 0 1rem;
   }
 }
