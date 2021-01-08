@@ -33,25 +33,9 @@ const menu = [[{name:'PIZZA QUATRO STAGIONI',price:'55,68 USD',description:'Inte
                     {name:'drinks QUATRO STAGIONI',price:'55,68 USD',description:'Integer ullamcorper neque eu purus euismod'},
                     {name:'drinks QUATRO STAGIONI',price:'55,68 USD',description:'Integer ullamcorper neque eu purus euismod'}]
             ]
-
 const typeDishes = ['pizza','soup','pasta','desert','wine','beer','drinks']
 const menuDishes = document.querySelector('.menu-dishes')
 const listDishes = document.querySelector('.list-dishes')
-
-typeDishes.map(item => {
-    menuDishes.innerHTML += `<li class="menu-dishes__item">${item}</li>`
-})
-menuDishes.addEventListener('click', (e)=>{
-    if(e.target.className === 'menu-dishes__item'){
-        menuDishes.childNodes.forEach((el,i) => {
-            if(el === e.target){
-                listDishes.innerHTML = '';
-                fillingMenu(i-1)
-            }
-        })
-    }
-})
-fillingMenu(0)
 
 function fillingMenu(s){
     menu[s].map(item => {
@@ -65,3 +49,21 @@ function fillingMenu(s){
         `
     })
 }
+fillingMenu(0)
+typeDishes.map(item => {
+    menuDishes.innerHTML += `<li class="menu-dishes__item">${item}</li>`
+})
+menuDishes.addEventListener('click', (e)=>{
+    menuDishes.childNodes.forEach((el,i) => {
+        if(el === e.target){
+            listDishes.innerHTML = '';
+            fillingMenu(i-1)
+        }
+    })
+})
+
+const scrollTwoSection = document.querySelector('#scroll-two-section');
+const twoSection = document.querySelector('.section__our-team');
+scrollTwoSection.addEventListener('click', ()=>{
+    twoSection.scrollIntoView({behavior: 'smooth'})
+})

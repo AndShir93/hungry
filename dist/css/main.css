@@ -125,20 +125,21 @@ b {
   font-size: 1.5rem;
   text-transform: uppercase;
   top: -80px;
-  right: 0;
+  right: -1px;
   bottom: 0;
   transform: rotate(-90deg);
   transform-origin: right bottom;
   z-index: 2;
   padding: 0 1rem;
   border: 1px solid #000;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0 0 5px 5px;
 }
 
 .col__img-panel_down {
   justify-content: flex-start;
   right: auto;
   left: -395px;
+  border-radius: 5px 5px 0 0;
 }
 
 .col__img {
@@ -175,6 +176,8 @@ b {
   position: absolute;
   bottom: 83px;
   left: calc(50% - 30px);
+  background: none;
+  border: none;
 }
 
 .container {
@@ -433,8 +436,7 @@ b {
   margin: 0 auto;
 }
 
-.form__name-user, .form__email-user, .form__phone-user, .form__date {
-  flex-basis: 49%;
+.form__input {
   height: 60px;
   margin: 0 0 10px 0;
   padding: 0 0 0 1rem;
@@ -444,6 +446,21 @@ b {
   background: #E5E5E5;
   border-radius: 5px;
   border: none;
+}
+
+.form__textarea {
+  margin: 0 0 10px 0;
+  padding: 1.2rem 0 0 1rem;
+  font-family: OpenSansLight;
+  color: rgba(51, 51, 51, 0.5);
+  font-size: .875rem;
+  background: #E5E5E5;
+  border-radius: 5px;
+  border: none;
+}
+
+.form__name-user, .form__email-user, .form__phone-user, .form__date {
+  flex-basis: 49%;
 }
 
 .form__submit {
@@ -523,20 +540,75 @@ b {
 
 .photo-galerie {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .photo-galerie__item {
   flex-basis: 25%;
-  position: relative;
 }
 
-.photo-galerie__item:after {
-  content: '';
+.photo-galerie__img {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form__name, .contact-form__email, .contact-form__phone {
+  flex-basis: 33%;
+}
+
+.contact-form__textarea {
+  flex-basis: 100%;
+}
+
+.contact-form__info {
+  flex-basis: 69%;
+}
+
+.contact-form__submit {
+  flex-basis: 29%;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info__item {
+  flex-basis: 32%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info__img {
+  width: 15px;
+  height: 25px;
+  margin: 0 10px 0 0;
+}
+
+.contact-info__text {
+  font-size: .6rem;
+  font-family: OpenSansBold;
+  color: #929292;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: #1A1A1A;
+}
+
+.footer__text {
+  font-family: OpenSansLight;
+  color: #fff;
+  text-align: center;
 }
 
 @media (max-width: 1355px) {
@@ -601,7 +673,7 @@ b {
     font-size: .8rem;
   }
   .col__img-panel_down {
-    left: -170px;
+    left: -171px;
   }
 }
 
@@ -667,6 +739,18 @@ b {
   .list-dishes__description {
     font-size: .5rem;
   }
+  .footer__text {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-form__info {
+    height: auto;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 660px) {
@@ -687,6 +771,23 @@ b {
   }
   .form {
     max-width: 400px;
+  }
+  .photo-galerie__item {
+    flex-basis: 50%;
+  }
+  .contact-form__name, .contact-form__email, .contact-form__phone {
+    height: 45px;
+    flex-basis: 100%;
+  }
+  .contact-form__textarea {
+    flex-basis: 100%;
+  }
+  .contact-form__info {
+    flex-basis: 100%;
+  }
+  .contact-form__submit {
+    height: 45px;
+    flex-basis: 100%;
   }
 }
 

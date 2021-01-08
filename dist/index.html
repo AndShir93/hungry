@@ -61,7 +61,7 @@
                     <img src="img/instagram.svg" alt="">
                 </a>
             </div>
-            <a href="" class="button-down"><img src="img/down-btn.svg" alt=""></a>
+            <button id="scroll-two-section" class="button-down"><img src="img/down-btn.svg" alt="Стрелка"></button>
         </div>
     </section>
     <section class="section section__our-team section_padding">
@@ -101,11 +101,11 @@
             <div class="row">
                 <div class="col col_align-center">
                     <h2 class="subtitle">book a table</h2>
-                    <form action="" class="form">
-                        <input type="text" class="form__name-user" placeholder="Имя">
-                        <input type="email" class="form__email-user" placeholder="Email">
-                        <input type="phone" class="form__phone-user" placeholder="Телефон">
-                        <input type="date" class="form__date">
+                    <form action="" class="form form__book">
+                        <input type="text" class=" form__input form__name-user" placeholder="Имя">
+                        <input type="email" class=" form__input form__email-user" placeholder="Email">
+                        <input type="phone" class=" form__input form__phone-user" placeholder="Телефон">
+                        <input type="date" class=" form__input form__date">
                         <input type="submit" class="form__submit" value="BOOK NOW">
                     </form>
                 </div>
@@ -168,12 +168,52 @@
     </section>
     <section class="section section__photo">
         <div class="photo-galerie">
-            <div class="photo-galerie__item"></div>
-            <div class="photo-galerie__item"></div>
-            <div class="photo-galerie__item"></div>
-            <div class="photo-galerie__item"></div>
+            <div class="photo-galerie__item">
+                <img class="photo-galerie__img" src="img/1.jpg" alt="">
+            </div>
+            <div class="photo-galerie__item">
+                <img class="photo-galerie__img" src="img/2.jpg" alt="">
+            </div>
+            <div class="photo-galerie__item">
+                <img class="photo-galerie__img" src="img/3.jpg" alt="">
+            </div>
+            <div class="photo-galerie__item">
+                <img class="photo-galerie__img" src="img/4.jpg" alt="">
+            </div>
         </div>
     </section>
+    <section class="section section_padding">
+        <div class="container">
+            <h2 class="subtitle">CONTACT</h2>
+            <p class="col__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+            <form class="contact-form" action="">
+                <input class="form__input contact-form__name" type="text" placeholder="Имя">
+                <input class="form__input contact-form__email" type="email" placeholder="Email">
+                <input class="form__input contact-form__phone" type="phone" placeholder="Телефон">
+                <textarea class="form__textarea contact-form__textarea" name="" id="" rows="5" placeholder="Сообщение"></textarea>
+                <div class="contact-form__info contact-info">
+                    <div class="contact-info__item">
+                        <img src="img/geo.svg" alt="Гео" class="contact-info__img">
+                        <p class="contact-info__text">5th London Boulevard, U.K.</p>
+                    </div>
+                    <div class="contact-info__item">
+                        <img src="img/call.svg" alt="Телефон" class="contact-info__img">
+                        <a href="tel:+40 729 131 637/+40 726 458 782" class="contact-info__text">+40 729 131 637/+40 726 458 782</a>
+                    </div>
+                    <div class="contact-info__item">
+                        <img src="img/messages.svg" alt="Конверт" class="contact-info__img">
+                        <a href="mailto:office@mindblister.com" class="contact-info__text">office@mindblister.com</a>
+                    </div>
+                </div>
+                <input class="form__submit contact-form__submit" type="submit">
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© Copyright <b>Mindblister</b>  2019</p>
+        </div>
+    </footer>
     <script src="script/main.js"></script>
 </body>
 </html>
