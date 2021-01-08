@@ -67,3 +67,33 @@ const twoSection = document.querySelector('.section__our-team');
 scrollTwoSection.addEventListener('click', ()=>{
     twoSection.scrollIntoView({behavior: 'smooth'})
 })
+
+const elemFormBook = document.forms.book.elements
+function verifyAllInput(form){
+    for(let i = 0; i < form.length; i++){
+        if(!form[i].value && form[i].hasAttribute('required')){
+            form.submit.setAttribute('disabled', true)
+            break
+        }else{
+            form.submit.removeAttribute('disabled')
+        }
+    }
+}
+function verifyInput(){
+    if(!this.value){
+        this.classList.add('not-valid')
+        verifyAllInput(this.form)
+    }else{
+        this.classList.remove('not-valid')
+        verifyAllInput(this.form)
+    }
+}
+elemFormBook.name.addEventListener('blur', verifyInput)
+elemFormBook.email.addEventListener('blur', verifyInput)
+elemFormBook.phone.addEventListener('blur', verifyInput)
+elemFormBook.date.addEventListener('change', verifyInput)
+
+const elemFormContact = document.forms.contact.elements
+elemFormContact.name.addEventListener('blur', verifyInput)
+elemFormContact.email.addEventListener('blur', verifyInput)
+elemFormContact.phone.addEventListener('blur', verifyInput)

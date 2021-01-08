@@ -367,7 +367,7 @@ b{font-weight: 600}
     justify-content: space-between;
     margin: 0 auto;
     &__input{
-        height: 60px;
+        height: 58px;
         margin: 0 0 10px 0;
         padding: 0 0 0 1rem;
         font-family: $OpenSansLight;
@@ -375,7 +375,7 @@ b{font-weight: 600}
         font-size: .875rem;
         background: #E5E5E5;
         border-radius: 5px;
-        border: none;
+        border: 1px solid #E5E5E5;
     }
     &__textarea{
         margin: 0 0 10px 0;
@@ -400,6 +400,10 @@ b{font-weight: 600}
         color: #FFFFFF;
         border: none;
         border-radius: 5px;
+        &:disabled{
+            opacity: .7;
+            cursor: not-allowed;
+        }
     }
 }
 .menu-dishes{
@@ -514,6 +518,10 @@ b{font-weight: 600}
         color: #fff;
         text-align: center;
 }
+}
+.not-valid{
+    border-color: rgb(241, 72, 72);
+    box-shadow: 0px 0px 9px -3px #f14848;
 }
 @media(max-width: 1355px){
     .col__img-wrap{

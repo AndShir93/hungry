@@ -101,12 +101,12 @@
             <div class="row">
                 <div class="col col_align-center">
                     <h2 class="subtitle">book a table</h2>
-                    <form action="" class="form form__book">
-                        <input type="text" class=" form__input form__name-user" placeholder="Имя">
-                        <input type="email" class=" form__input form__email-user" placeholder="Email">
-                        <input type="phone" class=" form__input form__phone-user" placeholder="Телефон">
-                        <input type="date" class=" form__input form__date">
-                        <input type="submit" class="form__submit" value="BOOK NOW">
+                    <form action="" name="book" class="form form__book">
+                        <input type="text" name="name" class=" form__input form__name-user" placeholder="Имя" required>
+                        <input type="email" name="email" class=" form__input form__email-user" placeholder="Email" required>
+                        <input type="phone" name="phone" class=" form__input form__phone-user" placeholder="Телефон" required>
+                        <input type="date" name="date" class=" form__input form__date" required>
+                        <input type="submit" name="submit" class="form__submit" value="BOOK NOW" disabled="true">
                     </form>
                 </div>
                 <div class="col col_align-center">
@@ -186,11 +186,11 @@
         <div class="container">
             <h2 class="subtitle">CONTACT</h2>
             <p class="col__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
-            <form class="contact-form" action="">
-                <input class="form__input contact-form__name" type="text" placeholder="Имя">
-                <input class="form__input contact-form__email" type="email" placeholder="Email">
-                <input class="form__input contact-form__phone" type="phone" placeholder="Телефон">
-                <textarea class="form__textarea contact-form__textarea" name="" id="" rows="5" placeholder="Сообщение"></textarea>
+            <form class="contact-form" action="" name="contact">
+                <input class="form__input contact-form__name" name="name" type="text" placeholder="Имя" required>
+                <input class="form__input contact-form__email" name="email" type="email" placeholder="Email" required>
+                <input class="form__input contact-form__phone" name="phone" type="phone" placeholder="Телефон" required>
+                <textarea class="form__textarea contact-form__textarea" name="messages" id="" rows="5" placeholder="Сообщение"></textarea>
                 <div class="contact-form__info contact-info">
                     <div class="contact-info__item">
                         <img src="img/geo.svg" alt="Гео" class="contact-info__img">
@@ -205,7 +205,7 @@
                         <a href="mailto:office@mindblister.com" class="contact-info__text">office@mindblister.com</a>
                     </div>
                 </div>
-                <input class="form__submit contact-form__submit" type="submit">
+                <input class="form__submit contact-form__submit" name="submit" type="submit" value="Отправить" disabled="true">
             </form>
         </div>
     </section>
