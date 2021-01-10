@@ -225,6 +225,15 @@ b{font-weight: 600}
     top: 0;
     right: 0;
     z-index: 100;
+    &__button{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 10px;
+        top: -120px;
+        cursor: pointer;
+        transition: .5s;
+    }
     &_top{
         margin: 25px 0 0 0;
         padding: 0 10px;
@@ -523,6 +532,10 @@ b{font-weight: 600}
     border-color: rgb(241, 72, 72);
     box-shadow: 0px 0px 9px -3px #f14848;
 }
+.valid{
+    border-color: rgb(72, 241, 109);
+    box-shadow: 0px 0px 9px -3px rgb(72, 241, 109);
+}
 @media(max-width: 1355px){
     .col__img-wrap{
         width: 330px;
@@ -710,19 +723,86 @@ b{font-weight: 600}
         width: 100%;
         flex-direction: column;
         height: auto;
-        background-color: rgba(255, 214, 0, .7);
+        background-color: rgba(0, 0, 0, .7);
         margin: 0;
         position: absolute;
-        left: -100%;
-        transition: 1s;
         font-size: .75rem;
+        transition: 1s;
+        left: -100%;
+        transition-delay: .5s;
+            & .menu__item{
+                animation: hideItemMenu .5s both;
+                &:nth-child(9){
+                    animation-delay: .05s;
+                }
+                &:nth-child(8){
+                    animation-delay: .1s;
+                }
+                &:nth-child(7){
+                    animation-delay: .15s;
+                }
+                &:nth-child(6){
+                    animation-delay: .2s;
+                }
+                &:nth-child(4){
+                    animation-delay: .25s;
+                }
+                &:nth-child(3){
+                    animation-delay: .3s;
+                }
+                &:nth-child(2){
+                    animation-delay: .35s;
+                }
+                &:nth-child(1){
+                    animation-delay: .4s;
+                }
+            }
+        &_show{
+            left: 0;
+            transition-delay: 0s;
+            & .menu__item{
+                animation: showItemMenu .5s both;
+                &:nth-child(9){
+                    animation-delay: .9s;
+                }
+                &:nth-child(8){
+                    animation-delay: .85s;
+                }
+                &:nth-child(7){
+                    animation-delay: .8s;
+                }
+                &:nth-child(6){
+                    animation-delay: .75s;
+                }
+                &:nth-child(4){
+                    animation-delay: .7s;
+                }
+                &:nth-child(3){
+                    animation-delay: .65s;
+                }
+                &:nth-child(2){
+                    animation-delay: .6s;
+                }
+                &:nth-child(1){
+                    animation-delay: .55s;
+                }
+            }
+        }
+        &__button{
+            top: 10px;
+            z-index: 100;
+        }
         &__item{
-            padding: .2rem 0;
+            padding: .5rem 0;
+            font-size: 1rem;
         }
         &__link{
             color: #fff;
         }
         .logo{
+            display: none;
+        }
+        &:after, &:before{
             display: none;
         }
     }
@@ -748,5 +828,21 @@ b{font-weight: 600}
         & .button + .button{
             margin: 0 0 0 1rem;
         }
+    }
+}
+@keyframes showItemMenu{
+    0%{
+        transform: translate(-100%, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+@keyframes hideItemMenu{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-100%, 0);
     }
 }

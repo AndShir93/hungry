@@ -1,3 +1,10 @@
+const menuButton = document.querySelector('#menu-button')
+const menuTop = document.querySelector('.menu')
+menuButton.addEventListener('click', ()=>{
+    menuTop.classList.toggle('menu_hide')
+    menuTop.classList.toggle('menu_show')
+})
+
 const menu = [[{name:'PIZZA QUATRO STAGIONI',price:'55,68 USD',description:'Integer ullamcorper neque eu purus euismod'},
                 {name:'PIZZA QUATRO STAGIONI',price:'35,68 USD',description:'Integer ullamcorper neque eu purus'},
                 {name:'PIZZA QUATRO STAGIONI',price:'55,68 USD',description:'Integer ullamcorper neque eu purus euismod'},
@@ -65,10 +72,11 @@ menuDishes.addEventListener('click', (e)=>{
 const scrollTwoSection = document.querySelector('#scroll-two-section');
 const twoSection = document.querySelector('.section__our-team');
 scrollTwoSection.addEventListener('click', ()=>{
-    twoSection.scrollIntoView({behavior: 'smooth'})
+    twoSection.scrollIntoView({behavior: 'smooth'})//Прокрутка страницы до второго блока
 })
 
 const elemFormBook = document.forms.book.elements
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 function verifyAllInput(form){
     for(let i = 0; i < form.length; i++){
         if(!form[i].value && form[i].hasAttribute('required')){
@@ -79,21 +87,35 @@ function verifyAllInput(form){
         }
     }
 }
+function verifyEmail(){
+    if(EMAIL_REGEXP.test(this.value)){
+        verifyAllInput(this.form)
+        this.classList.remove('not-valid')
+        this.classList.add('valid')
+    }else{
+        this.value = ''
+        this.setAttribute('placeholder', 'Введите корректный email')
+        this.classList.add('not-valid')
+        this.classList.remove('valid')
+    }
+}
 function verifyInput(){
     if(!this.value){
         this.classList.add('not-valid')
+        this.classList.remove('valid')
         verifyAllInput(this.form)
     }else{
         this.classList.remove('not-valid')
+        this.classList.add('valid')
         verifyAllInput(this.form)
     }
 }
-elemFormBook.name.addEventListener('blur', verifyInput)
-elemFormBook.email.addEventListener('blur', verifyInput)
-elemFormBook.phone.addEventListener('blur', verifyInput)
+elemFormBook.name.addEventListener('change', verifyInput)
+elemFormBook.email.addEventListener('change', verifyEmail)
+elemFormBook.phone.addEventListener('change', verifyInput)
 elemFormBook.date.addEventListener('change', verifyInput)
 
 const elemFormContact = document.forms.contact.elements
-elemFormContact.name.addEventListener('blur', verifyInput)
-elemFormContact.email.addEventListener('blur', verifyInput)
-elemFormContact.phone.addEventListener('blur', verifyInput)
+elemFormContact.name.addEventListener('change', verifyInput)
+elemFormContact.email.addEventListener('change', verifyEmail)
+elemFormContact.phone.addEventListener('change', verifyInput)

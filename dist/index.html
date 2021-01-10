@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="menu menu_top">
+            <div class="menu menu_top menu_hide">
                 <div class="menu__item">
                     <a href="#" class="menu__link">home</a>
                 </div>
@@ -24,7 +24,7 @@
                     <a href="#" class="menu__link">team</a>
                 </div>
                 <div class="menu__item logo">
-                    <a href="/"><img src="img/logo.svg" alt=""></a>
+                    <a href="/"><img src="img/logo.svg" alt="Логотип"></a>
                 </div>
                 <div class="menu__item">
                     <a href="#" class="menu__link">menu</a>
@@ -39,6 +39,7 @@
                     <a href="#" class="menu__link">contact</a>
                 </div>
             </div>
+            <img id="menu-button" class="menu__button" src="img/menu.svg" alt="Меню">
         </div>
     </header>
     <section class="main-section">
@@ -52,13 +53,13 @@
             </div>
             <div class="main-section__social">
                 <a href="#" class="main-section__social-item">
-                    <img src="img/facebook.svg" alt="">
+                    <img src="img/facebook.svg" alt="facebook">
                 </a>
                 <a href="#" class="main-section__social-item">
-                    <img src="img/twitter.svg" alt="">
+                    <img src="img/twitter.svg" alt="twitter">
                 </a>
                 <a href="#" class="main-section__social-item">
-                    <img src="img/instagram.svg" alt="">
+                    <img src="img/instagram.svg" alt="instagram">
                 </a>
             </div>
             <button id="scroll-two-section" class="button-down"><img src="img/down-btn.svg" alt="Стрелка"></button>
@@ -74,7 +75,7 @@
                 </div>
                 <div class="col col_align-center">
                     <div class="col__img-wrap">
-                        <img class="col__img" src="img/coals.jpg" alt="Угли">
+                        <img class="col__img" src="img/coals.jpg" alt="Угли" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -85,7 +86,7 @@
             <div class="row">
                 <div class="col col_align-center">
                     <div class="col__img-wrap col__img-wrap col__img-wrap_left">
-                        <img src="img/rectangle-min.jpg" alt="Повар" class="col__img">
+                        <img src="img/rectangle-min.jpg" alt="Повар" class="col__img" loading="lazy">
                     </div>
                 </div>
                 <div class="col col_align-center">
@@ -111,7 +112,7 @@
                 </div>
                 <div class="col col_align-center">
                     <div class="col__img-wrap">
-                        <img src="img/about-img.jpg" alt="Часы" class="col__img">
+                        <img src="img/about-img.jpg" alt="Часы" class="col__img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -122,7 +123,7 @@
             <div class="row">
                 <div class="col col_align-center">
                     <div class="col__img-wrap col__img-wrap col__img-wrap_left">
-                        <img src="img/desert.jpg" alt="Десерт" class="col__img">
+                        <img src="img/desert.jpg" alt="Десерт" class="col__img" loading="lazy">
                     </div>
                 </div>
                 <div class="col col_align-center">
@@ -150,7 +151,7 @@
                 <div class="col">
                      <div class="col col_align-center">
                         <div class="col__img-wrap col__img-wrap col__img-wrap_left">
-                            <img src="img/rings.jpg" alt="Десерт" class="col__img">
+                            <img src="img/rings.jpg" alt="Десерт" class="col__img" loading="lazy">
                             <div class="col__img-panel">weddings</div>
                         </div>
                     </div>
@@ -158,7 +159,7 @@
                 <div class="col">
                     <div class="col col_align-center">
                         <div class="col__img-wrap col__img-wrap">
-                            <img src="img/event.jpg" alt="Десерт" class="col__img">
+                            <img src="img/event.jpg" alt="Десерт" class="col__img" loading="lazy">
                             <div class="col__img-panel col__img-panel_down">corporate pzrties</div>
                         </div>
                     </div>
@@ -169,16 +170,16 @@
     <section class="section section__photo">
         <div class="photo-galerie">
             <div class="photo-galerie__item">
-                <img class="photo-galerie__img" src="img/1.jpg" alt="">
+                <img class="photo-galerie__img" src="img/1.jpg" alt="Зал 1" loading="lazy">
             </div>
             <div class="photo-galerie__item">
-                <img class="photo-galerie__img" src="img/2.jpg" alt="">
+                <img class="photo-galerie__img" src="img/2.jpg" alt="Угли" loading="lazy">
             </div>
             <div class="photo-galerie__item">
-                <img class="photo-galerie__img" src="img/3.jpg" alt="">
+                <img class="photo-galerie__img" src="img/3.jpg" alt="Зал 2" loading="lazy">
             </div>
             <div class="photo-galerie__item">
-                <img class="photo-galerie__img" src="img/4.jpg" alt="">
+                <img class="photo-galerie__img" src="img/4.jpg" alt="Зал 3" loading="lazy">
             </div>
         </div>
     </section>
@@ -214,6 +215,6 @@
             <p class="footer__text">© Copyright <b>Mindblister</b>  2019</p>
         </div>
     </footer>
-    <script src="script/main.js"></script>
+    <script src="script/main.js" async></script>
 </body>
 </html>
