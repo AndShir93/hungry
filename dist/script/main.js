@@ -1,7 +1,6 @@
 const menuButton = document.querySelector('#menu-button')
 const menuTop = document.querySelector('.menu')
 menuButton.addEventListener('click', ()=>{
-    menuTop.classList.toggle('menu_hide')
     menuTop.classList.toggle('menu_show')
 })
 
